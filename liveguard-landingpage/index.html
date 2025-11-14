@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+          <title>LiveGuard — Protect. Connect. Respond.</title>
+	
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="team" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bundle.min.css">
+
+     <style>
+          .section-title {
+               text-align: center;
+               margin: 80px 0 50px;
+          }
+          .section-title h1 {
+               font-size: 42px;
+               margin-bottom: 25px;
+               color: #333;
+               font-weight: 600;
+          }
+          .section-title p {
+               font-size: 20px;
+               line-height: 1.6;
+               color: #666;
+               max-width: 800px;
+               margin: 0 auto 40px;
+          }
+          .feature-section {
+               padding: 80px 0;
+          }
+          .feature-section .tab-pane-item {
+               padding: 20px 0;
+          }
+          .feature-section .tab-pane-item h2 {
+               font-size: 28px;
+               margin-bottom: 20px;
+               color: #333;
+          }
+          .feature-section .tab-pane-item p {
+               font-size: 16px;
+               line-height: 1.8;
+               color: #666;
+               margin-bottom: 25px;
+          }
+          .nav-tabs {
+               border-bottom: 2px solid #eee;
+               margin-bottom: 30px;
+          }
+          .nav-tabs a {
+               font-size: 16px;
+               padding: 15px 25px;
+               color: #666;
+               border: none;
+               border-bottom: 2px solid transparent;
+               margin-bottom: -2px;
+               transition: all 0.3s ease;
+          }
+          .nav-tabs a.active {
+               color: #2ecc71;
+               border-bottom-color: #2ecc71;
+          }
+          .about-section {
+               padding: 100px 0;
+               background: #f9f9f9;
+          }
+          .about-section .about-content {
+               max-width: 800px;
+               margin: 0 auto;
+          }
+
+          .social-icon li a {
+    display: inline-flex;        /* Changed from default */
+    align-items: center;          /* NEW - vertical centering */
+    justify-content: center;      /* NEW - horizontal centering */
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;        /* NEW - removes underlines */
+}
+     </style>
+</head>
+<body>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation" style="background: rgba(25, 28, 31, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0;">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand" style="color: #fff;">LiveGuard</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" style="margin-top: 0;">
+                         <li><a href="#home" class="smoothScroll" style="padding: 15px; color: rgba(255,255,255,0.8);">Home</a></li>
+                         <li><a href="#feature" class="smoothScroll" style="padding: 15px; color: rgba(255,255,255,0.8);">Features</a></li>
+                         <li><a href="#about" class="smoothScroll" style="padding: 15px; color: rgba(255,255,255,0.8);">About</a></li>
+                         <li><a href="#stats" class="smoothScroll" style="padding: 15px; color: rgba(255,255,255,0.8);">Stats</a></li>
+                         <li><a href="#testimonial" class="smoothScroll" style="padding: 15px; color: rgba(255,255,255,0.8);">Testimonials</a></li>
+                         <li><a href="#contact" class="smoothScroll" style="padding: 15px; color: rgba(255,255,255,0.8);">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" style="margin-top: 0;">
+                         <li><a href="#" style="padding: 15px; color: rgba(255,255,255,0.8);">Say hello - <span>info@liveguard.co.za</span></a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- FEATURE -->
+     <section id="home" data-stellar-background-ratio="0.5">
+  <div class="overlay" style="background: rgba(25, 28, 31, 0.95);"></div>
+  <div class="container" style="height: 100vh; padding-top: 15vh; display: flex; justify-content: center;">
+    <div class="row" style="width: 100%; max-width: 900px;">
+      <div class="col-md-12 text-center">
+        <div class="home-info" style="margin: 0 auto;">
+          <h3 style="color: #2ecc71; letter-spacing: 2px; font-size: 16px; text-transform: uppercase; margin-bottom: 25px; font-weight: 500;">
+            PROTECT. CONNECT. RESPOND.
+          </h3>
+          <h1 style="color: #fff; font-size: 52px; line-height: 1.3; margin-bottom: 35px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); font-weight: 600;">
+            LiveGuard helps communities stay alert, connected, and safe. One neighborhood at a time.
+          </h1>
+          <div class="hero-ctas">
+            <a href="join.html" class="btn btn-lg" style="background: #2ecc71; color: #fff; padding: 16px 38px; border-radius: 100px; font-weight: 600; margin: 0 8px; border: none; transition: all 0.3s ease; font-size: 16px;">
+              Join the Movement
+            </a>
+            <a href="learn.html" class="btn btn-lg" style="background: transparent; color: #fff; padding: 16px 38px; border-radius: 100px; font-weight: 600; margin: 0 8px; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s ease; font-size: 16px;">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+     <!-- FEATURE -->
+     <section id="feature" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h1 style="font-size: 42px; color: #333; font-weight: 600; margin-bottom: 25px;">Features</h1>
+                              <p style="font-size: 20px; line-height: 1.6; color: #666; max-width: 800px; margin: 0 auto 40px;">LiveGuard MVP — tools to alert, locate, report and connect locally.</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <ul class="nav nav-tabs" role="tablist" style="border-bottom: 2px solid #eee; margin-bottom: 30px;">
+                              <li class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab" style="font-size: 16px; padding: 15px 25px; color: #2ecc71; border-bottom: 2px solid #2ecc71;">Emergency SOS</a></li>
+                              <li><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab" style="font-size: 16px; padding: 15px 25px; color: #666;">Missing Persons Alerts</a></li>
+                              <li><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab" style="font-size: 16px; padding: 15px 25px; color: #666;">Community Crime Watch</a></li>
+                              <li><a href="#tab04" aria-controls="tab04" role="tab" data-toggle="tab" style="font-size: 16px; padding: 15px 25px; color: #666;">Safety Tips & Local Updates</a></li>
+                         </ul>
+
+                         <div class="tab-content">
+                              <div class="tab-pane active" id="tab01" role="tabpanel">
+                                   <div class="tab-pane-item" style="padding: 20px 0;">
+                                        <h2 style="font-size: 28px; color: #333; margin-bottom: 20px;">Emergency SOS</h2>
+                                        <p style="font-size: 16px; line-height: 1.8; color: #666; margin-bottom: 25px;">Instantly notify your trusted network and local responders with one tap. Share location and urgent context so help arrives faster.</p>
+                                        <p><button id="sos-open" class="section-btn" style="background: #e74c3c; color: #fff; padding: 12px 30px; border-radius: 30px; font-weight: 600; border: none;">Trigger SOS (demo)</button></p>
+                                   </div>
+                              </div>
+
+                              <div class="tab-pane" id="tab02" role="tabpanel">
+                                   <div class="tab-pane-item">
+                                        <h2>Missing Persons Alerts</h2>
+                                        <p>Publish local missing-person alerts with photo, last-known location and contact info — shared across the community network.</p>
+                                        <p><button id="missing-open" class="section-btn">Create Missing Person Alert (demo)</button></p>
+                                   </div>
+                              </div>
+
+                              <div class="tab-pane" id="tab03" role="tabpanel">
+                                   <div class="tab-pane-item">
+                                        <h2>Community Crime Watch</h2>
+                                        <p>Organize neighbourhood watch groups, post timely reports, and see local incidents on a community timeline.</p>
+                                   </div>
+                              </div>
+
+                              <div class="tab-pane" id="tab04" role="tabpanel">
+                                   <div class="tab-pane-item">
+                                        <h2>Safety Tips & Local Updates</h2>
+                                        <p>Curated safety advice and community notices so residents stay informed and prepared.</p>
+                                        <p><button id="business-dir" class="section-btn">Local Business Directory (demo)</button></p>
+                                   </div>
+                              </div>
+                         </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="feature-image">
+                              <img src="images/feature-mockup.png" class="img-responsive" alt="LiveGuard App Mockup">                             
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <section id="about" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-2 col-md-8 col-sm-12">
+                         <div class="section-title">
+                              <h1 style="font-size: 42px; color: #333; font-weight: 600; margin-bottom: 30px;">About LiveGuard</h1>
+                              <p style="font-size: 20px; line-height: 1.8; color: #666; max-width: 800px; margin: 0 auto;">LiveGuard's mission is to empower neighbourhoods with simple, reliable tools to share alerts, report incidents, and support one another in times of need. We focus on real-world community safety: fast alerts, clear communication, and local action.</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="about-image">
+                              <img src="images/feature-mockup.png" class="img-responsive" alt="LiveGuard Illustration">
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="about-list">
+                              <ul>
+                                   <li><strong>Missing persons alerts</strong> — Share critical details widely and quickly.</li>
+                                   <li><strong>Emergency SOS</strong> — One-touch alerts with location sharing.</li>
+                                   <li><strong>Local business directory</strong> — Trusted local services and partners.</li>
+                                   <li><strong>Quick report</strong> — Report incidents to your community and get help fast.</li>
+                              </ul>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- TESTIMONIAL -->
+    
+          <!-- STATS -->
+          <section id="stats" data-stellar-background-ratio="0.5">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-md-12 col-sm-12">
+                              <div class="section-title">
+                                   <h1>Our Impact</h1>
+                              </div>
+                         </div>
+
+                         <div class="col-md-4 col-sm-4 text-center">
+                              <h2>+2000</h2>
+                              <p>Alerts Sent</p>
+                         </div>
+                         <div class="col-md-4 col-sm-4 text-center">
+                              <h2>+5000</h2>
+                              <p>Users Protected</p>
+                         </div>
+                         <div class="col-md-4 col-sm-4 text-center">
+                              <h2>100+</h2>
+                              <p>Communities Connected</p>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     <section id="testimonial" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h1>Community Members</h1>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="testimonial-info">
+                              <h3>"The LiveGuard system has made our neighborhood feel so much more connected and secure. The quick response times have been invaluable."</h3>
+                              <div class="testimonial-item">
+                                   <img src="images/tst-image1.jpg" class="img-responsive" alt="Michael">
+                                   <h4>Community Member</h4>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="testimonial-info">
+                              <h3>"Being part of the LiveGuard network gives me peace of mind. The community alerts have helped us stay informed and safe."</h3>
+                              <div class="testimonial-item">
+                                   <img src="images/tst-image2.jpg" class="img-responsive" alt="Sofia">
+                                   <h4>Community Member</h4>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="testimonial-info">
+                              <h3>"The emergency response feature is fantastic. It's reassuring to know help is just one tap away when needed."</h3>
+                              <div class="testimonial-item">
+                                   <img src="images/tst-image3.jpg" class="img-responsive" alt="Monica">
+                                   <h4>Community Member</h4>
+                              </div>
+                         </div>
+                    </div>
+
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+         <!-- CALL TO ACTION -->
+         <section id="cta" data-stellar-background-ratio="0.5">
+              <div class="container">
+                   <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                             <div class="section-title">
+                                  <h1>Join the LiveGuard Network</h1>
+                                  <p>Together, we keep each other safe.</p>
+                                  <a href="#contact" class="section-btn smoothScroll">Join the LiveGuard Network</a>
+                             </div>
+                        </div>
+                   </div>
+              </div>
+         </section>
+
+
+     <!-- PRICING -->
+     <section id="pricing" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h1>LiveGuard Plans</h1>
+                              <p>Choose the plan that suits your community's needs. All prices shown in ZAR (monthly).</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="pricing-thumb">
+                             <div class="pricing-title">
+                                  <h2>Starter</h2>
+                             </div>
+                             <div class="pricing-info">
+                                   <p>100 Alerts / month</p>
+                                   <p>Quick Reports (limited)</p>
+                                   <p>Basic business directory access</p>
+                                   <p>Community groups &amp; timeline</p>
+                                   <p>Email support (24-hour)</p>
+                             </div>
+                             <div class="pricing-bottom">
+                                   <span class="pricing-dollar">R149 / mo</span>
+                                   <a href="#" class="section-btn pricing-btn">Register now</a>
+                             </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="pricing-thumb">
+                             <div class="pricing-title">
+                                  <h2>Community</h2>
+                             </div>
+                             <div class="pricing-info">
+                                   <p>1,000 Alerts / month</p>
+                                   <p>Priority reports &amp; moderation</p>
+                                   <p>Featured business listings</p>
+                                   <p>Community insights &amp; analytics</p>
+                                   <p>Priority support (15-minute)</p>
+                             </div>
+                             <div class="pricing-bottom">
+                                   <span class="pricing-dollar">R299 / mo</span>
+                                   <a href="#" class="section-btn pricing-btn">Register now</a>
+                             </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="pricing-thumb">
+                             <div class="pricing-title">
+                                  <h2>Guardian Pro</h2>
+                             </div>
+                             <div class="pricing-info">
+                                   <p>Unlimited Alerts</p>
+                                   <p>Dedicated account manager</p>
+                                   <p>Real-time responder integration</p>
+                                   <p>Advanced analytics &amp; exports</p>
+                                   <p>Emergency support (1-minute)</p>
+                             </div>
+                             <div class="pricing-bottom">
+                                   <span class="pricing-dollar">R499 / mo</span>
+                                   <a href="#" class="section-btn pricing-btn">Register now</a>
+                             </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- CONTACT -->
+     <section id="contact" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-1 col-md-10 col-sm-12">
+                         <form id="contact-form" role="form" action="" method="post">
+                              <div class="section-title">
+                                   <h1>Say hello to us</h1>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <input type="text" class="form-control" placeholder="Full name" name="name" required="">
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <input type="email" class="form-control" placeholder="Email address" name="email" required="">
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <input type="submit" class="form-control" name="send message" value="Send Message">
+                              </div>
+                              <div class="col-md-12 col-sm-12">
+                                   <textarea class="form-control" rows="8" placeholder="Your message" name="message" required=""></textarea>
+                              </div>
+                         </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>       
+
+
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                         <h4>About LiveGuard</h4>
+                         <p>Empowering communities to stay safe and connected through innovative security solutions.</p>
+                         <ul class="footer-contact">
+                              <li><i class="fa fa-map-marker"></i>Cape Town, South Africa</li>
+                              <li><i class="fa fa-phone"></i>+27 (0) 21 123 4567</li>
+                              <li><i class="fa fa-envelope"></i><a href="mailto:info@liveguard.co.za">info@liveguard.co.za</a></li>
+                         </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <h4>Quick Links</h4>
+                         <ul>
+                              <li><a href="#home">Home</a></li>
+                              <li><a href="#feature">Features</a></li>
+                              <li><a href="#pricing">Pricing</a></li>
+                              <li><a href="#testimonial">Testimonials</a></li>
+                              <li><a href="#contact">Contact</a></li>
+                         </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <h4>Stay Connected</h4>
+                         <p>Subscribe to our newsletter for updates and safety tips.</p>
+                         <div class="footer-newsletter">
+                              <form>
+                                   <input type="email" class="form-control" placeholder="Enter your email">
+                                   <button type="submit" class="btn">Subscribe</button>
+                              </form>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="footer-bottom">
+                    <ul class="social-icon">
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-instagram"></a></li>
+                         <li><a href="#" class="fa fa-whatsapp"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                    <div class="copyright-text">
+                         <p>&copy; 2025 LiveGuard. All Rights Reserved.</p>
+                         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                    </div>
+               </div>
+          </div>
+     </footer>
+
+
+           
+           <!-- SCRIPTS -->
+     <script src="js/bundle.js"></script>
+
+</body>
+</html>

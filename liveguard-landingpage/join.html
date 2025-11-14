@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Join the LiveGuard Movement - Together, We Keep Each Other Safe</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bundle.min.css">
+    <style>
+        .join-hero {
+            background: linear-gradient(rgba(25, 28, 31, 0.95), rgba(25, 28, 31, 0.95)), url('images/home-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 15vh;
+        }
+        .pricing-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: #2ecc71;
+        }
+        .pricing-card h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .pricing-card .price {
+            color: #2ecc71;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+        .pricing-card ul li {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+        .pricing-card ul li:before {
+            content: "✓";
+            color: #2ecc71;
+            position: absolute;
+            left: 0;
+        }
+        .section-btn {
+            background: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 100px;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .section-btn:hover {
+            background: #27ae60;
+            transform: translateY(-2px);
+            color: #fff;
+            text-decoration: none;
+        }
+        .join-form {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+        .join-form input,
+        .join-form select,
+        .join-form textarea {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: #fff;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .join-form input:focus,
+        .join-form select:focus,
+        .join-form textarea:focus {
+            border-color: #2ecc71;
+            outline: none;
+        }
+        .join-form label {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 8px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation" style="background: rgba(25, 28, 31, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0;">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand" style="color: #fff;">LiveGuard</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" style="margin-top: 0;">
+                    <li><a href="index.html" style="padding: 15px; color: rgba(255,255,255,0.8);">Back to Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="join-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h3 style="color: #2ecc71; letter-spacing: 2px; font-size: 16px; text-transform: uppercase; margin-bottom: 25px; font-weight: 500;">JOIN THE MOVEMENT</h3>
+                    <h1 style="color: #fff; font-size: 48px; line-height: 1.3; margin-bottom: 25px;">Join the LiveGuard Movement</h1>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 18px; line-height: 1.6; margin-bottom: 40px;">Building Safer Communities Together</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section style="background: #191c1f; padding: 80px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h3>Basic</h3>
+                        <div class="price">R149/mo</div>
+                        <ul>
+                            <li>100 Alerts per month</li>
+                            <li>Basic reporting tools</li>
+                            <li>Community timeline</li>
+                            <li>Email support</li>
+                        </ul>
+                        <button class="section-btn">Get Started</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h3>Pro</h3>
+                        <div class="price">R299/mo</div>
+                        <ul>
+                            <li>1,000 Alerts per month</li>
+                            <li>Advanced reporting</li>
+                            <li>Priority support</li>
+                            <li>Analytics dashboard</li>
+                        </ul>
+                        <button class="section-btn">Get Started</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">R499/mo</div>
+                        <ul>
+                            <li>Unlimited alerts</li>
+                            <li>Custom integrations</li>
+                            <li>24/7 priority support</li>
+                            <li>Dedicated account manager</li>
+                        </ul>
+                        <button class="section-btn">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOIN FORM -->
+    <section style="background: #191c1f; padding: 0 0 80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="join-form">
+                        <h2 style="color: #fff; margin-bottom: 30px; text-align: center;">Get Started with LiveGuard</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>First Name</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Last Name</label>
+                                    <input type="text" required>
+                                </div>
+                            </div>
+                            <label>Email</label>
+                            <input type="email" required>
+                            <label>Community Name</label>
+                            <input type="text" required>
+                            <label>Package</label>
+                            <select required>
+                                <option value="">Select a package...</option>
+                                <option value="basic">Basic - R149/mo</option>
+                                <option value="pro">Pro - R299/mo</option>
+                                <option value="enterprise">Enterprise - R499/mo</option>
+                            </select>
+                            <label>Additional Information</label>
+                            <textarea rows="4"></textarea>
+                            <div class="text-center">
+                                <button type="submit" class="section-btn">Submit Application</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section style="background: #191c1f; padding: 0 0 80px;"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h1 style="color: #fff;">Why Join LiveGuard?</h1>
+                        <p style="color: rgba(255,255,255,0.8);">Building Safer Communities Together</p>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-md-offset-2">
+                    <div style="color: rgba(255,255,255,0.8);">
+                        <p style="font-size: 18px; line-height: 1.6; margin-bottom: 30px;">LiveGuard is more than just an app - it's a community-driven movement dedicated to making our neighborhoods safer, one alert at a time.</p>
+                        
+                        <h3 style="color: #fff; margin: 30px 0 20px;">What You Get When You Join:</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 15px; padding-left: 24px; position: relative;">
+                                <span style="color: #2ecc71; position: absolute; left: 0;">✓</span>
+                                Instant access to community alerts and updates
+                            </li>
+                            <li style="margin-bottom: 15px; padding-left: 24px; position: relative;">
+                                <span style="color: #2ecc71; position: absolute; left: 0;">✓</span>
+                                Real-time emergency response coordination
+                            </li>
+                            <li style="margin-bottom: 15px; padding-left: 24px; position: relative;">
+                                <span style="color: #2ecc71; position: absolute; left: 0;">✓</span>
+                                Direct connection to local safety networks
+                            </li>
+                            <li style="margin-bottom: 15px; padding-left: 24px; position: relative;">
+                                <span style="color: #2ecc71; position: absolute; left: 0;">✓</span>
+                                Voice in community safety initiatives
+                            </li>
+                        </ul>
+
+                        <h3 style="color: #fff; margin: 30px 0 20px;">How to Get Started:</h3>
+                        <ol style="color: rgba(255,255,255,0.8); padding-left: 20px;">
+                            <li style="margin-bottom: 15px;">Choose your plan from our flexible options above</li>
+                            <li style="margin-bottom: 15px;">Fill out the application form with your details</li>
+                            <li style="margin-bottom: 15px;">Connect with your local community</li>
+                            <li style="margin-bottom: 15px;">Start contributing to a safer neighborhood</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="copyright-text col-md-12 col-sm-12">
+                    <div class="col-md-6 col-sm-6">
+                        <p>Contact: <a href="mailto:info@liveguard.co.za">info@liveguard.co.za</a></p>
+                        <p>© LiveGuard</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/bundle.js"></script>
+</body>
+</html>
