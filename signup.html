@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Account – Zambezi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #3d7068 0%, #4a8f85 100%);
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        header p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .form-card {
+            background: #fff;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #222;
+        }
+        input, select {
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #a8e6cf;
+            box-shadow: 0 0 0 3px rgba(168,230,207,0.2);
+            transform: translateY(-1px);
+        }
+        .btn-submit {
+            background: #a8e6cf;
+            color: #000;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(168,230,207,0.4);
+        }
+        .btn-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .success-message {
+            text-align: center;
+            padding: 30px;
+            background: #d4edda;
+            color: #161816;
+            border-radius: 12px;
+            margin-top: 20px;
+            display: none;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #a8e6cf;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 36px; }
+            .form-card { padding: 30px; }
+        }
+
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Open Your Zambezi Account</h1>
+    <p>Create your account today and take control of your financial future.</p>
+</header>
+
+<div class="container">
+    <div class="form-card">
+        <form id="signupForm" action="/signup" method="POST" novalidate>
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+27 82 123 4567">
+            </div>
+
+            <div class="form-group">
+                <label for="id_number">ID / Passport Number</label>
+                <input type="text" id="id_number" name="id_number" required placeholder="8001011234087">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Residential Address</label>
+                <input type="text" id="address" name="address" required placeholder="123 Main St, Potchefstroom">
+            </div>
+
+            <div class="form-group">
+                <label for="account_type">Account Type</label>
+                <select id="account_type" name="account_type" required>
+                    <option value="">Select Account Type</option>
+                    <option value="starter">Starter – R49/mo</option>
+                    <option value="growth">Growth – R99/mo</option>
+                    <option value="pro">Pro – R199/mo</option>
+                    <option value="enterprise">Enterprise – R499/mo</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+                Create Account
+            </button>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            <h3>Account Created Successfully!</h3>
+            <p>We've sent a confirmation email to <strong id="emailDisplay"></strong>.</p>
+            <p>You'll be redirected to your dashboard shortly...</p>
+        </div>
+
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById('signupForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMessage = document.getElementById('successMessage');
+    const emailDisplay = document.getElementById('emailDisplay');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Basic validation
+        const email = document.getElementById('email').value;
+        const fullname = document.getElementById('fullname').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const id = document.getElementById('id_number').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const account = document.getElementById('account_type').value;
+
+        if (!fullname || !email || !phone || !id || !address || !account) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // Simulate submission
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Creating Account...';
+
+        setTimeout(() => {
+            // Show success
+            form.style.display = 'none';
+            successMessage.style.display = 'block';
+            emailDisplay.textContent = email;
+
+            // Optional: redirect after 3 seconds
+            setTimeout(() => {
+                window.location.href = 'dashboard.html'; // or index.html
+            }, 3000);
+
+        }, 1500);
+    });
+</script>
+
+</body>
+</html>

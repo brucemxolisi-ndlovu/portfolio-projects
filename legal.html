@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal – Zambezi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #e1e5e3;
+            /* match footer background */
+            color: #333;
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* DYNAMIC BACKGROUND – SUBTLE PARTICLES */
+        .bg-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(184, 151, 42, 0.3);
+            /* gold particles */
+            border-radius: 50%;
+            opacity: 0;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(0.8);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: translateY(-100vh) scale(1.1);
+            }
+        }
+
+        /* HEADER */
+        header {
+            background: #e1e5e3;
+            color: #1a1a1a;
+            text-align: center;
+            padding: 140px 20px 100px;
+            border-bottom: 1px solid rgba(184, 151, 42, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+            margin-bottom: 24px;
+            transition: transform 0.6s ease;
+            background: transparent;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #b8972a;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 19px;
+            max-width: 750px;
+            margin: 0 auto;
+            opacity: 0.95;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 0.95;
+                transform: translateY(0);
+            }
+        }
+
+        /* MAIN CONTENT – CARDS AND HOVER */
+        .container {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+
+        .legal-section {
+            margin-bottom: 90px;
+            padding: 40px;
+            background: rgba(225, 229, 227, 0.6);
+            /* light grey card */
+            border-radius: 18px;
+            border: 1px solid rgba(184, 151, 42, 0.1);
+            /* soft gold border */
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(184, 151, 42, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .legal-section:hover::before {
+            opacity: 1;
+        }
+
+        .legal-section:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(184, 151, 42, 0.2);
+            /* stronger gold glow */
+            border-color: rgba(184, 151, 42, 0.3);
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #b8972a;
+            /* gold headings */
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #b8972a;
+            transition: width 0.6s ease;
+        }
+
+        .legal-section:hover h2::after {
+            width: 80px;
+            /* longer underline on hover */
+        }
+
+        h3 {
+            font-size: 21px;
+            font-weight: 600;
+            color: #333;
+            /* dark headings */
+            margin: 36px 0 18px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        h3::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #b8972a;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.4s ease;
+        }
+
+        .legal-section:hover h3::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        p,
+        li {
+            font-size: 16.5px;
+            margin-bottom: 18px;
+            color: #333;
+            /* dark text */
+            transition: color 0.3s ease;
+        }
+
+        .legal-section:hover p,
+        .legal-section:hover li {
+            color: #000;
+            /* darker text on hover for visibility */
+        }
+
+        ul {
+            padding-left: 28px;
+            margin-bottom: 24px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        li::before {
+            content: '•';
+            color: #b8972a;
+            position: absolute;
+            left: -10px;
+            font-weight: bold;
+        }
+
+        strong {
+            color: #b8972a;
+            font-weight: 700;
+        }
+
+        /* LAST UPDATED – LIVE CLOCK */
+        .updated {
+            text-align: right;
+            font-size: 15px;
+            color: #555;
+            margin-top: 50px;
+            font-style: italic;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            background: #b8972a;
+            border-radius: 50%;
+            animation: pulse 2.5s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1.3);
+                opacity: 1;
+            }
+        }
+
+        /* BACK TO TOP */
+        .back-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 56px;
+            height: 56px;
+            background: #b8972a;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 20px rgba(184, 151, 42, 0.25);
+            z-index: 1000;
+        }
+
+        .back-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-top:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(184, 151, 42, 0.35);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #555;
+            font-size: 13.5px;
+            border-top: 1px solid rgba(184, 151, 42, 0.15);
+            margin-top: 120px;
+        }
+
+        footer a {
+            color: #b8972a;
+            text-decoration: none;
+            position: relative;
+        }
+
+        footer a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: #b8972a;
+            transition: width 0.4s ease;
+        }
+
+        footer a:hover::after {
+            width: 100%;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .container {
+                margin: 70px auto;
+            }
+
+            .legal-section {
+                padding: 30px 20px;
+            }
+
+            .back-top {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- DYNAMIC PARTICLE BACKGROUND -->
+    <div class="bg-particles" id="particles"></div>
+
+    <!-- HEADER -->
+    <header>
+        <img src="./images/logo.png" alt="Zambezi" class="logo">
+        <h1>Legal Center</h1>
+        <p class="subtitle">Privacy, Terms, Disclaimer & Risk Disclosure – Always Up to Date</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- PRIVACY POLICY -->
+        <section class="legal-section" data-title="Privacy Policy">
+            <h2>Privacy Policy</h2>
+            <p><strong>Effective Date:</strong> November 13, 2025</p>
+            <p>At Zambezi, we respect your privacy and are committed to protecting your personal information. This
+                Privacy Policy explains how we collect, use, and safeguard your data when you use our services.</p>
+
+            <h3>1. Information We Collect</h3>
+            <ul>
+                <li>Personal details (name, email, phone, ID number)</li>
+                <li>Financial information (account type, transaction history)</li>
+                <li>Device and usage data (IP address, browser type)</li>
+            </ul>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use your data to:</p>
+            <ul>
+                <li>Provide and improve our financial services</li>
+                <li>Verify identity and prevent fraud</li>
+                <li>Send account updates and marketing (with consent)</li>
+                <li>Comply with FSCA and legal requirements</li>
+            </ul>
+
+            <h3>3. Data Security</h3>
+            <p>We implement bank-grade encryption, secure servers, and regular audits to protect your information.</p>
+
+            <h3>4. Your Rights</h3>
+            <p>You may request access, correction, or deletion of your data at any time by contacting
+                <strong>privacy@zambezi.co.za</strong>.</p>
+        </section>
+
+        <!-- TERMS OF USE -->
+        <section class="legal-section" data-title="Terms of Use">
+            <h2>Terms of Use</h2>
+            <p><strong>Last Updated:</strong> November 13, 2025</p>
+            <p>By using Zambezi services, you agree to these Terms. Failure to comply may result in account suspension.
+            </p>
+
+            <h3>1. Account Responsibilities</h3>
+            <ul>
+                <li>You must provide accurate information</li>
+                <li>You are responsible for maintaining account security</li>
+                <li>Unauthorized access must be reported immediately</li>
+            </ul>
+
+            <h3>2. Prohibited Activities</h3>
+            <p>You may not:</p>
+            <ul>
+                <li>Use the platform for illegal purposes</li>
+                <li>Attempt to hack or disrupt services</li>
+                <li>Share your account with others</li>
+            </ul>
+
+            <h3>3. Service Availability</h3>
+            <p>We strive for 99.9% uptime but are not liable for temporary outages due to maintenance or force majeure.
+            </p>
+        </section>
+
+        <!-- DISCLAIMER -->
+        <section class="legal-section" data-title="Disclaimer">
+            <h2>Disclaimer</h2>
+            <p><strong>Published:</strong> November 13, 2025</p>
+            <p>The information provided by Zambezi is for general informational purposes only. All content is subject to
+                change without notice.</p>
+
+            <h3>No Financial Advice</h3>
+            <p>Content on this platform does not constitute financial, investment, or legal advice. You should consult a
+                qualified professional before making decisions.</p>
+
+            <h3>No Guarantees</h3>
+            <p>Past performance is not indicative of future results. Investment involves risk, including possible loss
+                of principal.</p>
+
+            <h3>Third-Party Links</h3>
+            <p>We are not responsible for the content or privacy practices of external websites.</p>
+        </section>
+
+        <!-- RISK DISCLOSURE -->
+        <section class="legal-section" data-title="Risk Disclosure">
+            <h2>Risk Disclosure</h2>
+            <p><strong>Issued:</strong> November 13, 2025</p>
+            <p><strong>Investing involves substantial risk.</strong> You may lose some or all of your investment.</p>
+
+            <h3>Key Risks</h3>
+            <ul>
+                <li><strong>Market Risk:</strong> Asset values can fluctuate</li>
+                <li><strong>Liquidity Risk:</strong> Some investments may be hard to sell</li>
+                <li><strong>Credit Risk:</strong> Counterparties may default</li>
+                <li><strong>Operational Risk:</strong> System or human errors</li>
+            </ul>
+
+            <h3>Investor Suitability</h3>
+            <p>Our products are suitable only for investors who understand and can bear these risks. We conduct
+                suitability assessments before onboarding.</p>
+
+            <h3>Capital at Risk</h3>
+            <p><strong>Your capital is at risk. You are not protected by any statutory compensation scheme.</strong></p>
+        </section>
+
+        <p class="updated">
+            <span class="live-dot"></span>
+            Last updated: <span id="updatedDate"></span>
+        </p>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <div class="back-top" id="backTop">Up</div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© <span id="year"></span> Zambezi. All rights reserved.</p>
+        <p><a href="index.html">Back to Home</a></p>
+    </footer>
+
+    <!-- JS: DYNAMIC & PROFESSIONAL -->
+    <script>
+        // Auto-update year
+        const year = new Date().getFullYear();
+        document.getElementById('year').textContent = year;
+
+        // Live "Last updated" with time
+        const updateDate = () => {
+            const now = new Date();
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            const formatted = `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()} at ${now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+            document.getElementById('updatedDate').textContent = formatted;
+        };
+        updateDate();
+        setInterval(updateDate, 1000);
+
+        // Back to top
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backTop.classList.add('show');
+            } else {
+                backTop.classList.remove('show');
+            }
+        });
+        backTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Floating mint particles – subtle
+        const particlesContainer = document.getElementById('particles');
+        const createParticle = () => {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDelay = Math.random() * 10 + 's';
+            particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
+            particlesContainer.appendChild(particle);
+            setTimeout(() => particle.remove(), 18000);
+        };
+        setInterval(createParticle, 600);
+
+        // Dynamic page title on hover
+        document.querySelectorAll('.legal-section').forEach(sec => {
+            sec.addEventListener('mouseenter', () => {
+                const title = sec.getAttribute('data-title');
+                document.title = `${title} – Zambezi`;
+            });
+            sec.addEventListener('mouseleave', () => {
+                document.title = 'Legal – Zambezi';
+            });
+        });
+
+        console.log('%cZambezi Legal Center – Professional & Dynamic', 'color: #a8e6cf; font-size: 14px; font-weight: 600;');
+    </script>
+
+</body>
+
+</html>
