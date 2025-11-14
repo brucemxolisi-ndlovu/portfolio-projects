@@ -1,0 +1,527 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background: white;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+/* Search Section */
+.search-section {
+    background: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#categoryFilter,
+#searchInput {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+}
+
+#categoryFilter {
+    min-width: 180px;
+}
+
+#searchInput {
+    min-width: 300px;
+}
+
+.search-section button {
+    padding: 12px 24px;
+    background: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background: #0056CC;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 3rem 0 1.5rem 0;
+    text-align: center;
+}
+
+/* ✅ Special Headings: Featured, Business of the Week, Recent Businesses */
+.heading {
+    color: #FF4081; /* 👈 Navy Blue */
+}
+
+/* Business Listings Grid */
+.business-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Business Cards */
+.business-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e5e7eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+}
+
+.business-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.featured-businesses {
+    margin-bottom: 4rem; /* adjust value as needed */
+}
+
+/* Card Image Header */
+.business-card::before {
+    content: '';
+    display: block;
+    height: 180px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: var(--bg-image);
+}
+
+/* Card Content */
+.business-card-content {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.business-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+/* Category Badge */
+.business-card .category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #6b7280;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.business-card .address,
+.business-card .phone {
+    color: #6b7280;
+    font-size: 13px;
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.business-card .address::before { content: '📍'; font-size: 12px; }
+.business-card .phone::before { content: '📞'; font-size: 12px; }
+
+.business-card .description {
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 6px 0 12px 0;
+    overflow: hidden;
+    max-height: 33.6px;
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+/* Open Button */
+.open-btn {
+    background: #f8f9fa;
+    color: #6b7280;
+    border: 1px solid #e5e7eb;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: auto;
+}
+
+.open-btn:hover {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+/* Business of the Week Segment */
+.business-of-the-week {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 0.25rem;
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.business-of-the-week h2 {
+    margin: 0;
+    padding-bottom: 0.25rem;
+    text-align: center;
+}
+
+.botw-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.botw-image {
+    flex: 1;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+}
+
+.botw-content {
+    flex: 1;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.75rem;
+}
+
+.botw-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.botw-content .category {
+    display: inline-block;
+    background: rgba(0, 122, 255, 0.1);
+    color: #007AFF;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.botw-content .description {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.botw-content .details {
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.botw-content .details::before {
+    font-size: 12px;
+}
+
+.botw-content .address::before { content: '📍'; }
+.botw-content .phone::before { content: '📞'; }
+.botw-content .hours::before { content: '🕒'; }
+.botw-content .website::before { content: '🌐'; }
+
+.botw-content .website a {
+    color: #007AFF;
+    text-decoration: none;
+}
+
+.botw-content .website a:hover {
+    text-decoration: underline;
+}
+
+.botw-content .open-btn {
+    width: fit-content;
+    margin-top: 0.5rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.modal-content .close-btn:hover {
+    color: #1f2937;
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.modal-content .category {
+    display: inline-block;
+    background: rgba(0, 122, 255, 0.1);
+    color: #007AFF;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.modal-content .description {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.modal-content .details {
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.modal-content .details::before {
+    font-size: 12px;
+}
+
+.modal-content .address::before { content: '📍'; }
+.modal-content .phone::before { content: '📞'; }
+.modal-content .hours::before { content: '🕒'; }
+.modal-content .website::before { content: '🌐'; }
+
+.modal-content .website a {
+    color: #007AFF;
+    text-decoration: none;
+}
+
+.modal-content .website a:hover {
+    text-decoration: underline;
+}
+
+.modal-content .open-btn {
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+/* View All Link */
+.view-all {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.view-all a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #007AFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.view-all a:hover {
+    background: #0056CC;
+}
+
+/* All Businesses Page (Initially Hidden) */
+.all-businesses-page {
+    display: none;
+}
+
+.all-businesses-page.active {
+    display: block;
+}
+
+.back-btn {
+    background: #6b7280;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.back-btn:hover {
+    background: #4b5563;
+}
+
+/* Footer */
+footer {
+    background: #f8f9fa;
+    color: #6b7280;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-section {
+        flex-direction: column;
+        margin: 1rem;
+    }
+    
+    #searchInput,
+    #categoryFilter {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .business-listings {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .botw-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .botw-image {
+        height: 200px;
+    }
+
+    .botw-content {
+        min-height: auto;
+        padding: 1rem;
+    }
+}
+
+/* Animation */
+.business-card, .business-of-the-week, .modal-content {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

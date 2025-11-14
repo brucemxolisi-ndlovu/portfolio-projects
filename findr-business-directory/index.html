@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findr - Local Business Directory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Findr</h1>
+    </header>
+    
+    <!-- Main Page -->
+    <div id="mainPage">
+        <section class="search-section">
+            <select id="categoryFilter" aria-label="Filter by category">
+                <option value="all">All Categories</option>
+            </select>
+            <input type="text" placeholder="Search businesses" id="searchInput" aria-label="Search businesses">
+            <button type="button" aria-label="Search">Search</button>
+        </section>
+        
+        <main>
+            <section class="featured-businesses">
+                <h2 class="heading">Featured Businesses</h2>
+                <div class="business-listings" id="featuredBusinessesGrid">
+                    <!-- Dynamically populated via JavaScript -->
+                </div>
+            </section>
+            
+            <section class="business-of-the-week">
+                <h2 class="heading">Business of the Week</h2>
+                <div class="botw-container" id="businessOfTheWeek">
+                    <div class="botw-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop&crop=center')">
+                    </div>
+                    <div class="botw-content">
+                        <h3>Bruce Ndlovu Web Dev</h3>
+                        <span class="category">Web Dev</span>
+                        <p class="description">Bruce Ndlovu Web Dev offers full-stack web development services, specializing in responsive design, e-commerce platforms, and custom web applications. With over 10 years of experience, Bruce delivers high-quality, user-friendly websites tailored to your business needs, ensuring seamless performance across devices.</p>
+                        <p class="details address">24 Acacia Ave, Aspen Hills, Johannesburg South</p>
+                        <p class="details phone">(011) 762-8843</p>
+                        <p class="details hours">Mon-Fri: 9:00 AM - 5:00 PM</p>
+                        <p class="details website"><a href="https://brucendlovu.dev" target="_blank">brucendlovu.dev</a></p>
+                        <button class="open-btn" onclick="openBusiness('Bruce Ndlovu Web Dev')">Learn More</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="recent-businesses">
+                <h2 class="heading">Recent Businesses</h2>
+                <div class="business-listings" id="recentBusinessesGrid">
+                    <!-- Dynamically populated via JavaScript -->
+                </div>
+                <div class="view-all">
+                    <a href="#" onclick="showAllBusinesses()">View All Businesses</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- All Businesses Page -->
+    <div id="allBusinessesPage" class="all-businesses-page">
+        <main>
+            <button class="back-btn" onclick="showMainPage()">← Back to Home</button>
+            <h2 class="heading">All Businesses</h2>
+            <div class="business-listings" id="allBusinessesGrid">
+                <!-- Dynamically populated business cards -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Business Details -->
+    <div id="businessModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modalBusinessName"></h3>
+            <span id="modalCategory" class="category"></span>
+            <p id="modalDescription" class="description"></p>
+            <p id="modalAddress" class="details address"></p>
+            <p id="modalPhone" class="details phone"></p>
+            <p id="modalHours" class="details hours"></p>
+            <p id="modalWebsite" class="details website"></p>
+            <button class="open-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Findr. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
